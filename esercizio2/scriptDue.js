@@ -34,21 +34,50 @@ const squadraDiCalcio = [
     }
 ];
 
-
+const valoriPartita = [
+    {
+        'nomeSquadra': '',
+        'falli': 0
+    },
+    {
+        'nomeSquadra': '',
+        'falli': 0
+    },
+    {
+        'nomeSquadra': '',
+        'falli': 0
+    },
+    {
+        'nomeSquadra': '',
+        'falli': 0
+    },
+    {
+        'nomeSquadra': '',
+        'falli': 0
+    },
+    {
+        'nomeSquadra': '',
+        'falli': 0
+    },
+]
 
 // creo viariabile per numeri random
 let randomFalli = Math.floor(Math.random() * 150);
 let  randomPunti = Math.floor(Math.random() * 150);
 
 squadraDiCalcio.map((element)=>{
-
+    let {nomeSquadra, falli} = valoriPartita;
     let {nome, falliSubiti} = squadraDiCalcio;
     // creo numeri random
     randomFalli = Math.floor(Math.random() * 150);
     randomPunti = Math.floor(Math.random() * 150);
     falliSubiti = randomFalli;
+    // prendo valori per secondo array
+    falli = falliSubiti;
+    nomeSquadra = element.nome;
 
-    console.log(`nome: ${element.nome}`);
-    console.log(`i falli subiti sono: ${falliSubiti}`);
+    // stampo il nome e i falli delle squadre nel secondo array
+    console.log(`nome: ${nomeSquadra}`);
+    console.log(`i falli subiti sono: ${falli}`);
 
 });
