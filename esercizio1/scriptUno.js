@@ -16,21 +16,24 @@ const bici = [
     }
 ];
 
+
+
 let biciPiuPesante = bici[0]; 
 let nameBike = '';
+const {nome, peso} = bici;
 
-bici.forEach((element)=>{
-    if(element.peso> biciPiuPesante.peso){
-        biciPiuPesante = element;
-        nameBike = element.nome
+for(let i = 0; i < bici.length; i++){
+
+    if(bici[i].peso > biciPiuPesante.peso){
+        biciPiuPesante = bici[i];
+        nameBike = bici[i].nome;
     }
-    
-   
-});
-   
+}
+
 console.log(biciPiuPesante.peso);
-console.log( nameBike);
-let bikeScreen = document.createElement('div');  //document.createElement('div')
+console.log(nameBike);
+
+let bikeScreen = document.createElement('div');  
 let pesoBici = document.createElement('div');
 const container = document.querySelector('.container');
 
