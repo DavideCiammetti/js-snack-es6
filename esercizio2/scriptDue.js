@@ -34,11 +34,7 @@ const squadraDiCalcio = [
     }
 ];
 
-const valoriPartita = [
-    {
 
-    },
-]
 
 // creo viariabile per numeri random
 let randomFalli = Math.floor(Math.random() * 150);
