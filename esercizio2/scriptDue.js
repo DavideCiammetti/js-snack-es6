@@ -34,20 +34,25 @@ const squadraDiCalcio = [
     }
 ];
 
+const valoriPartita = [
+    {
+
+    },
+]
+
 // creo viariabile per numeri random
 let randomFalli = Math.floor(Math.random() * 150);
 let  randomPunti = Math.floor(Math.random() * 150);
 
-// console.log(random);
-
 squadraDiCalcio.map((element)=>{
-    let {puntiFatti, falliSubiti} = squadraDiCalcio;
+
+    let {nome, falliSubiti} = squadraDiCalcio;
+    // creo numeri random
     randomFalli = Math.floor(Math.random() * 150);
     randomPunti = Math.floor(Math.random() * 150);
-    puntiFatti = randomPunti;
     falliSubiti = randomFalli;
 
-    console.log(`i punti fatti sono: ${puntiFatti}`);
+    console.log(`nome: ${element.nome}`);
     console.log(`i falli subiti sono: ${falliSubiti}`);
-    return element;
+
 });
